@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ligar/Desligar Lâmpada</title>
+<style>
+    #lampada {
+        width: 200px;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+</head>
+<body>
+
+<div id="container" style="text-align: center;">
+    <!-- Corrigido o caminho das imagens -->
+    <img id="lampada" src="lampadas/lampadaapagada.svg">
+    <br>
+    <button onclick="ligarLampada()">Ligar</button>
+    <button onclick="desligarLampada()">Desligar</button>
+</div>
+
+<script>
+    var lampada = document.getElementById("lampada");
+
+    function ligarLampada() {
+        // Corrigido o caminho da imagem com aspas
+        lampada.src = "lampadas/lampadaacesa.svg";
+    }
+
+    function desligarLampada() {
+        // Corrigido o caminho da imagem com aspas
+        lampada.src = "lampadas/lampadaapagada.svg";
+    }
+
+    function quebrarLampada() {
+        // Exibir a imagem de lâmpada quebrada
+        lampada.src = "lampadas/lampadaquebrada.svg";
+    }
+
+    // Adicionando um event listener para o clique na lâmpada
+    lampada.addEventListener("click", quebrarLampada);
+</script>
+
+</body>
+</html>
